@@ -34,6 +34,12 @@ public class ExercicioFib {
     }
 
     public static void main(String[] args) {
-        System.out.println(fiboRec(10));
+        int[] vals = {4,8,16,32};
+        for (int val : vals) {
+            System.out.println(fiboRec(val));
+            System.out.println(fibo(val));
+            int[] f = new int[val + 1];
+            System.out.println(memoizedFibo(f, val));
+        }
     }
-}
+    }
