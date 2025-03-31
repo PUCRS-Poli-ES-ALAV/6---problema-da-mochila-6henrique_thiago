@@ -11,14 +11,14 @@ public class ExercicioFib {
         int[] f = new int[n+1];
         f[0] = 0;
         f[1] = 1;
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i <= n; i++) {
             f[i] = f[i-1] + f[i-2];
         }
         return f[n];
     }
 
     public static int memoizedFibo(int[] f, int n) {
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             f[i] = -1;
         }
         return lookupFibo(f, n);
